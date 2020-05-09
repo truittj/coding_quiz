@@ -3,9 +3,6 @@
   padding-right: 10px;
 }
 
-#highScores {
-  padding-left: 10 px;
-}
 h1 {
   text-align: center;
 }
@@ -19,4 +16,5 @@ h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 25%;
 }
