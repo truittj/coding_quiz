@@ -1,0 +1,22 @@
+#timer {
+  float: right;
+  padding-right: 10px;
+}
+
+#highScores {
+  padding-left: 10 px;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+#headingStart {
+  margin-top: 12%;
+}
+#startQuizBtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
