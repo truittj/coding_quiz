@@ -53,21 +53,3 @@ var quizAnswerDisplayRandomized = function (array) {
   console.log(array);
   arrangeBtnOrder(array);
 };
-
-function arrangeBtnOrder(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    if (i < 4) {
-      qOne.push(arr[i]);
-    } /*else if (i >= 3 && i < 6) {
-      qTwo.push(arr[i]);
-    } else {
-      qTwo.push(arr[i]);
-    }
-  }*/
-    console.log(`Question1: ${qOne}`);
-    ///console.log(`Question2: ${qTwo}`);
-    //console.log(`Question3: ${qThree}`);
-  }
-}
-shuffle(btnArray);
-console.log(btnArray);
