@@ -18,7 +18,56 @@ function setTime() {
   }, 1000);
 }
 //setTime();
+
+// too shuffle btn array, to over write after onClick happens
+
 btnArray = [btn1, btn2, btn3, btn4];
-var btnRandom = btnArray[Math.floor(Math.random() * btnArray.length)];
-console.log(btnRandom);
+var qOne = [];
+var qTwo = [];
+var qThree = [];
+
+//var btnRandom = btnArray[Math.floor(Math.random() * btnArray.length)];
+//console.log(btnRandom);
+//console.log(btnArray);
+
+//Function to get all btns to shuffle into a new array
+
+var quizAnswerDisplayRandomized = function (array) {
+  var counter = array.length;
+  var temp;
+  var index;
+
+  // while loop
+  while (counter > 0) {
+    // pick a random index
+    index = Math.floor(Math.random() * counter);
+
+    // decrease the counter by 1
+    counter--;
+
+    // swap the last element
+    temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+  console.log(array);
+  arrangeBtnOrder(array);
+};
+
+function arrangeBtnOrder(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (i < 4) {
+      qOne.push(arr[i]);
+    } /*else if (i >= 3 && i < 6) {
+      qTwo.push(arr[i]);
+    } else {
+      qTwo.push(arr[i]);
+    }
+  }*/
+    console.log(`Question1: ${qOne}`);
+    ///console.log(`Question2: ${qTwo}`);
+    //console.log(`Question3: ${qThree}`);
+  }
+}
+shuffle(btnArray);
 console.log(btnArray);
