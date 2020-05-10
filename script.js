@@ -5,18 +5,17 @@ var btn2 = document.getElementById("btn2");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");*/
 var landText = document.getElementById("landingText");
-var showQuestons = document.getElementById("showQuestons");
+var showQuestons = document.getElementById("quiz");
 var startQuizBtn = document.getElementById("startQuizBtn");
 var submitBtn = document.getElementById("submitBtn");
 var submitScoreEl = document.getElementById("submitScore");
 var userScoreEl = document.getElementById("userScore");
 var userNameInput;
-var questionHeader = document.getElementById("question1");
+var questionHeader = document.getElementById("titleQuestion");
 var answerChoices = document.getElementById("answers");
-var secondsLeft = 60;
+var questionNumber = -1;
+var secondsLeft = 60 + 1;
 var answer;
-
-startQuizBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
   // swap welcome msg w/ questions
@@ -24,7 +23,10 @@ function startQuiz() {
 
   showQuestons.classList.remove("d-none");
 
-  // timer set and begins 60s
+  // timer set and begins 90s countdown
+  setTime();
+  // create questions to display
+  makeQuestions();
 }
 
 function setTime() {
@@ -42,4 +44,23 @@ function setTime() {
 }
 //setTime();
 
-// too shuffle li array, to over write after onClick happens
+// too shuffle btn array, to over write after onClick happens
+
+function makeQuestions() {
+  questionNumber++;
+  answer = questions[questionNumber].answer;
+
+  questionHeader.textContent = questions[questionNumber].title;
+  answerChoices.innerHTML = "";
+
+  var choices = questions[questionNumber].choices;
+
+  for (var i = 0; i < choices.length; i++) {
+    var nextChoice = document.createElement("button");
+
+    nextChoice.textContent = choices[i];
+    answerBtn = answerChoices
+      .appendChild(nextChoice)
+      .setAttribute("class", "btn btn-primary btn-block");
+  }
+}
