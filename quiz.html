@@ -25,19 +25,34 @@
   </nav>
     
 
-
-  <main class="container" id="#">
+<!-- Questions Here-->
+  <main class="container .d-none" id="#">
     <section class="row">    
       <article class="col" id="question1"><h3>Test Question</h3>
-        <button id="btn1" type="button" class="btn btn-primary btn-lg btn-block">Block level button1</button>
-        <button id="btn2" type="button" class="btn btn-primary btn-lg btn-block">Block level button2</button>
-        <button id="btn3" type="button" class="btn btn-primary btn-lg btn-block">Block level button3</button>
-        <button id="btn4" type="button" class="btn btn-primary btn-lg btn-block">Block level button4</button>
+        <button id="btn1 answerChoice" type="button" class="btn btn-primary btn-lg btn-block">Block level button1</button>
+        <button id="btn2 answerChoice" type="button" class="btn btn-primary btn-lg btn-block">Block level button2</button>
+        <button id="btn3 answerChoice" type="button" class="btn btn-primary btn-lg btn-block">Block level button3</button>
+        <button id="btn4 answerChoice" type="button" class="btn btn-primary btn-lg btn-block">Block level button4</button>
       </article>
     </section>
   </main>
 
-
+  <!--Final Screen -->
+  <div class="container mt-5 d-none" id="submit-score">
+    <div class="row justify-content-center mt-5 pt-3 pb-3">
+      <div class="col-10 col-lg-8">
+        <h2>All Done!</h2>
+        <p id="user-score"></p>
+        <form class="form-group">
+          <label for="new-score">Enter your name: </label>
+          <input type="text" id="userName" />
+          <button type="button" class="btn btn-primary btn-lg submitBtn">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
     <script type=text/javascript src=./script.js></script>
     <script
