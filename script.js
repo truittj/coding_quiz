@@ -23,7 +23,7 @@ function startQuiz() {
 
   showQuestons.classList.remove("d-none");
 
-  // timer set and begins 90s countdown
+  // timer set and begins 60 countdown
   setTime();
   // create questions to display
   makeQuestions();
